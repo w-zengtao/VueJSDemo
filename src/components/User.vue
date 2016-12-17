@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="user_profile">
-    <router-link :to="{ name: 'user', params: { id: 123 }}"> 首页 </router-link>
+    <router-link :to="{ name: 'user', params: { id: next_id }}"> 首页 </router-link>
+    <router-view></router-view>
   </div>
 </template>
 
