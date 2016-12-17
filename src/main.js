@@ -25,7 +25,7 @@ const routes = [
       component : resolve => require(['./components/LogTime.vue'], resolve),
     }]
   },
-  { path : '/user/:id', component: User }
+  { path : '/user/:id', name: 'user', component: User }
 ];
 
 const router = new VueRouter({

@@ -7,7 +7,6 @@
     <div class="panel-body">
       <h1 class="text-center">{{ time }} 小时</h1>
     </div>
-
   </div>
 </template>
 
