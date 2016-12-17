@@ -7,6 +7,8 @@ import Home from './components/Home'
 import App from './App'
 import store from './store'
 import TimeEntries from './components/TimeEntries'
+import User from './components/User'
+
 
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -22,7 +24,8 @@ const routes = [
       path : 'log-time',
       component : resolve => require(['./components/LogTime.vue'], resolve),
     }]
-  }
+  },
+  { path : '/user/:id', component: User }
 ];
 
 const router = new VueRouter({
