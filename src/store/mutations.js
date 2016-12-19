@@ -1,4 +1,6 @@
 import * as types from './mutation-types'
+import api from '../api'
+import models from '../models'
 
 // Object.assign
 
@@ -14,5 +16,16 @@ export default {
   },
   [types.ADD_TOTAL_TIME] (state, timeCount) {
     state.totalTime += timeCount
+  },
+  [types.TEACHER_GET_WORKS] (state, teacher_id) {
+    api.getUser().then(response => {
+      let user = new models.User(response.body['user'])
+      console.log(user.id)
+      let article = new models.Article(response.body['user'])
+      console.log(article.id)
+    }, response => {
+
+    })
   }
+
 };

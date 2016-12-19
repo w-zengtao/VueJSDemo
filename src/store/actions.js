@@ -12,5 +12,8 @@ export default {
   },
   savePlan({commit}, plan) {
     commit(types.SAVE_PLAN, plan)
+  },
+  teacherGetWork({commit}, teacher_id) {
+    commit(types.TEACHER_GET_WORKS, teacher_id)
   }
 }
